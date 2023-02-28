@@ -1,14 +1,18 @@
 export const arrMenu = [
   {
     id: 1,
-    name: "About",
+    name: "Home",
   },
   {
     id: 2,
-    name: "Pricing",
+    name: "About",
   },
   {
     id: 3,
+    name: "Pricing",
+  },
+  {
+    id: 4,
     name: "Contact",
   },
 ];

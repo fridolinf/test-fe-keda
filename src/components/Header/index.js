@@ -1,19 +1,16 @@
-import { Button, Grid } from "@mui/material";
+import { Avatar, Button, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import wave from "assets/svg/wave.svg";
-import useMediaQuerys from "hooks/useBreakpoints";
-import React from "react";
+import MovingText from "react-moving-text";
 
-const Header = () => {
-  const { breakWidth } = useMediaQuerys();
-
+const Header = ({ setOpen, open }) => {
   return (
-    <Grid container position="sticky">
+    <Grid id="header" container position="relative" zIndex={100000}>
       <Grid container position="absolute" top={0} zIndex="-1">
         <img
           style={{
-            height: breakWidth !== 900 && 300,
             position: "relative",
+            width: "100%",
           }}
           src={wave}
           alt="wave-component"
@@ -27,8 +24,37 @@ const Header = () => {
           justifyContent="space-between"
           margin="0 5px"
         >
-          <Box>Logo</Box>
-          <Button>LOGIN</Button>
+          <Box>
+            <Avatar
+              sx={{
+                fontSize: "10px",
+                backgroundColor: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              MYTH
+            </Avatar>
+          </Box>
+
+          <Box fontSize="30px" fontWeight="bold">
+            <MovingText
+              type="typewriter"
+              duration="1000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="infinite"
+              fillMode="none"
+              dataText={["MYTH", "TECH", "PRESENT", "GG-ERP"]}
+            ></MovingText>
+          </Box>
+          <Button
+            onClick={() => setOpen(!open)}
+            variant="contained"
+            sx={{ backgroundColor: "#000" }}
+          >
+            LOGIN
+          </Button>
         </Grid>
       </Grid>
     </Grid>

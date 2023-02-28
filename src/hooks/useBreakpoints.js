@@ -1,15 +1,11 @@
 import { useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
-// export const matches = useMediaQuery("(min-width:600px)");
 
 const useMediaQuerys = () => {
   const minWidth300 = useMediaQuery("(min-width:300px)");
   const minWidth600 = useMediaQuery("(min-width:600px)");
   const minWidth900 = useMediaQuery("(min-width:900px)");
   const [breakWidth, setBreakWidth] = useState(300);
-  console.log(minWidth300, "minWidth300");
-  console.log(minWidth600, "minWidth600");
-  console.log(minWidth900, "minWidth900");
   useEffect(() => {
     if (minWidth300) {
       setBreakWidth(300);

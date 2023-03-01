@@ -10,7 +10,6 @@ import "./App.css";
 
 function App() {
   const [firstRender, setFirstRender] = useState(true);
-  // const { DisplayLotties } = useLotties();
 
   const handleEventLottie = (e) => {
     if (e === "pause") {

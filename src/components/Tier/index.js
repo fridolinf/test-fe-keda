@@ -33,7 +33,6 @@ const Tier = () => {
           },
         }}
         itemBackgroundStyle={{
-          // backgroundColor: "#00d4ff",
           background:
             "linear-gradient(191deg, rgba(230,65,154,0.5131302521008403) 6%, rgba(93,93,185,0.7120098039215687) 28%, rgba(0,212,255,0.6223739495798319) 84%, rgba(230,65,154,0.5215336134453781) 94%)",
           borderRadius: "20px",
@@ -49,7 +48,7 @@ const Tier = () => {
               {val.title}
             </Typography>
             {val.content.map((val, i) => (
-              <Grid item key={i}>
+              <Grid id="tier-content" item key={i}>
                 {val}
               </Grid>
             ))}

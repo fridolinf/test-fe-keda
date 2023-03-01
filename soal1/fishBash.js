@@ -13,4 +13,6 @@ function fishBash(val) {
     console.log(output);
   }
 }
-fishBash(5);
+// fishBash(5);
+// fishBash(9);
+fishBash(15);

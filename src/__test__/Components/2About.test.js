@@ -1,6 +1,8 @@
-/* eslint-disable jest/valid-expect */
-/* eslint-disable react/react-in-jsx-scope */
-import { queryByAttribute, queryAllByAttribute } from "@testing-library/react";
+import {
+  queryByAttribute,
+  queryAllByAttribute,
+  screen,
+} from "@testing-library/react";
 import About from "components/Contents/about";
 import RenderComponent from "utils/test-utils/renderComponent";
 describe("About Component", () => {
@@ -11,8 +13,10 @@ describe("About Component", () => {
 
     const aboutInitialGrid = getById(container, "about");
     const benefitProduct = getAllById(container, "benefit-products");
+    const listContentBenefit = screen.getAllByRole("list");
 
     expect(aboutInitialGrid).toBeInTheDocument();
     expect(benefitProduct).toHaveLength(4);
+    expect(listContentBenefit).toBeTruthy();
   });
 });

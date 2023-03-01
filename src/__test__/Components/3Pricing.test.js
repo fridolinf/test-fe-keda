@@ -1,5 +1,3 @@
-/* eslint-disable jest/valid-expect */
-/* eslint-disable react/react-in-jsx-scope */
 import { queryByAttribute } from "@testing-library/react";
 import Pricing from "components/Contents/pricing";
 import RenderComponent from "utils/test-utils/renderComponent";

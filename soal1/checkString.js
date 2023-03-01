@@ -15,5 +15,6 @@ function isPalindrome(str) {
     return false;
   }
 }
-console.log(isPalindrome("Kasur ini rusak")); // true
-console.log(isPalindrome("hello world")); // false
+console.log(isPalindrome("katak")); // true
+console.log(isPalindrome("arah")); // false
+console.log(isPalindrome("cek")); // false

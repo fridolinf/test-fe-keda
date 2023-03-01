@@ -26,6 +26,7 @@ const Header = ({ setOpen, open }) => {
         >
           <Box>
             <Avatar
+              id="avatar-icon"
               sx={{
                 fontSize: "10px",
                 backgroundColor: "black",
@@ -49,6 +50,7 @@ const Header = ({ setOpen, open }) => {
             ></MovingText>
           </Box>
           <Button
+            id="login-btn"
             onClick={() => setOpen(!open)}
             variant="contained"
             sx={{ backgroundColor: "#000" }}
